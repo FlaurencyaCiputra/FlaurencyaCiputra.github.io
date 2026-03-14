@@ -163,10 +163,10 @@ const Index = () => {
         <div className="max-w-4xl mx-auto px-6 py-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted-foreground">
           <span className="bg-card px-3 py-1 rounded-lg font-medium text-foreground shadow-sm">Yale University</span>
           <span className="bg-card px-3 py-1 rounded-lg shadow-sm">B.S. Computer Science</span>
-          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Class of 2023</span>
+          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Meta</span>
           <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Distributed Systems</span>
-          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Algorithms</span>
-          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Robotics</span>
+          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">LLM Inference Infra</span>
+          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Fullstack</span>
         </div>
       </div>
 
