@@ -87,7 +87,7 @@ const Index = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="sticky top-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/50">
-        
+
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <span className="font-display text-lg font-semibold text-foreground tracking-tight">
             flaurencya<span className="text-primary">.</span>
@@ -111,15 +111,15 @@ const Index = () => {
               Hi, I'm Flaurencya Ciputra
             </h1>
             <p className="text-base text-muted-foreground max-w-lg leading-relaxed">
-              I build systems that scale to millions — from LLM inference infrastructure 
-              to creator analytics tools. Yale CS '23. Currently making AI inference 
+              I build systems that scale to millions — from LLM inference infrastructure
+              to creator analytics tools. Yale CS '23. Currently making AI inference
               faster at Meta.
             </p>
             <div className="flex gap-3 mt-7">
               <a
                 href="mailto:flaurencya.ciputra@gmail.com"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-xl hover:opacity-90 transition-opacity shadow-sm shadow-primary/20">
-                
+
                 <Mail className="w-4 h-4" /> Get in touch
               </a>
               <a
@@ -127,7 +127,7 @@ const Index = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 border border-border bg-card text-foreground text-sm font-medium rounded-xl hover:bg-secondary transition-colors">
-                
+
                 <Linkedin className="w-4 h-4" /> LinkedIn
               </a>
             </div>
@@ -138,7 +138,7 @@ const Index = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="hidden md:block">
-            
+
             <div className="w-56 h-68 overflow-hidden rounded-3xl shadow-lg shadow-primary/10 ring-1 ring-border">
               <img src={pfp} alt="Flaurencya Ciputra" className="w-full h-full object-cover" />
             </div>
@@ -151,7 +151,7 @@ const Index = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
           className="md:hidden mt-8 flex justify-center">
-          
+
           <div className="w-44 h-56 overflow-hidden rounded-3xl shadow-lg shadow-primary/10 ring-1 ring-border">
             <img src={pfp} alt="Flaurencya Ciputra" className="w-full h-full object-cover" />
           </div>
@@ -161,12 +161,10 @@ const Index = () => {
       {/* Education strip */}
       <div className="bg-secondary/50 border-y border-border/50">
         <div className="max-w-4xl mx-auto px-6 py-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted-foreground">
-          <span className="bg-card px-3 py-1 rounded-lg font-medium text-foreground shadow-sm">Yale University</span>
-          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">B.S. Computer Science</span>
-          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Meta</span>
           <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Distributed Systems</span>
           <span className="bg-card px-3 py-1 rounded-lg shadow-sm">LLM Inference Infra</span>
-          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Fullstack</span>
+          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Backend and Fullstack</span>
+          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Constant Learning</span>
         </div>
       </div>
 
@@ -179,14 +177,13 @@ const Index = () => {
           whileInView="visible"
           viewport={{ once: true }}
           className="mb-10">
-          
+
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
             Where I've worked
           </h2>
           <p className="text-muted-foreground mt-2">A few places I've called home.</p>
         </motion.div>
 
-        
 
 
 
@@ -224,7 +221,8 @@ const Index = () => {
 
 
 
-        
+
+
       </section>
 
       {/* Skills */}
@@ -237,7 +235,7 @@ const Index = () => {
             whileInView="visible"
             viewport={{ once: true }}
             className="mb-8">
-            
+
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
               Tools & languages
             </h2>
@@ -255,7 +253,7 @@ const Index = () => {
               viewport={{ once: true }}
               whileHover={{ y: -3 }}
               className="px-4 py-2 bg-card border border-border/60 text-foreground text-sm font-medium rounded-xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all cursor-default">
-              
+
                 {skill}
               </motion.span>
             )}
@@ -276,13 +274,13 @@ const Index = () => {
           whileInView="visible"
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-10 items-center">
-          
+
           <div>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-3">
               Let's connect
             </h2>
             <p className="text-muted-foreground">
-              Whether it's distributed systems, LLM infrastructure, or something 
+              Whether it's distributed systems, LLM infrastructure, or something
               completely different — I'd love to hear from you.
             </p>
           </div>
@@ -291,7 +289,7 @@ const Index = () => {
             <a
               href="mailto:flaurencya.ciputra@gmail.com"
               className="group flex items-center justify-between p-4 bg-card border border-border/60 rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
-              
+
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
                   <Mail className="w-4 h-4 text-primary" />
@@ -305,7 +303,7 @@ const Index = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between p-4 bg-card border border-border/60 rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
-              
+
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
                   <Linkedin className="w-4 h-4 text-primary" />
@@ -322,7 +320,6 @@ const Index = () => {
       <footer className="border-t border-border/50">
         <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between text-sm text-muted-foreground">
           <span>© 2026 Flaurencya Ciputra</span>
-          <span>Built with care ♡</span>
         </div>
       </footer>
     </div>);
