@@ -80,19 +80,19 @@ const skills = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background selection:bg-primary/20">
+    <div className="min-h-screen bg-background selection:bg-primary/15">
       {/* Nav */}
       <motion.nav
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="sticky top-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/50"
       >
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="font-display text-lg font-bold tracking-tight text-foreground">
-            FC<span className="text-primary">.</span>
+        <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+          <span className="font-display text-lg font-semibold text-foreground tracking-tight">
+            flaurencya<span className="text-primary">.</span>
           </span>
-          <div className="flex gap-8 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+          <div className="flex gap-6 text-sm text-muted-foreground font-medium">
             <a href="#work" className="hover:text-foreground transition-colors">Work</a>
             <a href="#skills" className="hover:text-foreground transition-colors">Skills</a>
             <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
@@ -101,31 +101,24 @@ const Index = () => {
       </motion.nav>
 
       {/* Hero */}
-      <section className="max-w-5xl mx-auto px-6 pt-24 pb-20">
-        <div className="grid md:grid-cols-[1fr_auto] gap-16 items-end">
-          <motion.div
-            custom={0}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-          >
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">
-              Systems Engineer · Meta
+      <section className="max-w-4xl mx-auto px-6 pt-20 pb-16">
+        <div className="grid md:grid-cols-[1fr_auto] gap-12 items-center">
+          <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible">
+            <p className="text-sm text-primary font-medium mb-3 tracking-wide">
+              Systems Engineer at Meta
             </p>
-            <h1 className="font-display text-6xl md:text-8xl font-extrabold text-foreground leading-[0.9] tracking-tight mb-6">
-              Flaurencya
-              <br />
-              <span className="text-primary">Ciputra</span>
+            <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground leading-tight tracking-tight mb-5">
+              Hi, I'm Flaurencya Ciputra
             </h1>
-            <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+            <p className="text-base text-muted-foreground max-w-lg leading-relaxed">
               I build systems that scale to millions — from LLM inference infrastructure 
               to creator analytics tools. Yale CS '23. Currently making AI inference 
               faster at Meta.
             </p>
-            <div className="flex gap-3 mt-8">
+            <div className="flex gap-3 mt-7">
               <a
                 href="mailto:flaurencya.ciputra@gmail.com"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-foreground text-background text-sm font-medium rounded-sm hover:bg-foreground/90 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-xl hover:opacity-90 transition-opacity shadow-sm shadow-primary/20"
               >
                 <Mail className="w-4 h-4" /> Get in touch
               </a>
@@ -133,7 +126,7 @@ const Index = () => {
                 href="https://www.linkedin.com/in/flaurencya-ciputra"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border border-foreground text-foreground text-sm font-medium rounded-sm hover:bg-foreground hover:text-background transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-border bg-card text-foreground text-sm font-medium rounded-xl hover:bg-secondary transition-colors"
               >
                 <Linkedin className="w-4 h-4" /> LinkedIn
               </a>
@@ -141,12 +134,12 @@ const Index = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="hidden md:block"
           >
-            <div className="w-64 h-80 overflow-hidden rounded-sm border-2 border-foreground/10 grayscale hover:grayscale-0 transition-all duration-500">
+            <div className="w-56 h-68 overflow-hidden rounded-3xl shadow-lg shadow-primary/10 ring-1 ring-border">
               <img src={pfp} alt="Flaurencya Ciputra" className="w-full h-full object-cover" />
             </div>
           </motion.div>
@@ -157,44 +150,43 @@ const Index = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="md:hidden mt-10 flex justify-center"
+          className="md:hidden mt-8 flex justify-center"
         >
-          <div className="w-48 h-60 overflow-hidden rounded-sm border-2 border-foreground/10 grayscale hover:grayscale-0 transition-all duration-500">
+          <div className="w-44 h-56 overflow-hidden rounded-3xl shadow-lg shadow-primary/10 ring-1 ring-border">
             <img src={pfp} alt="Flaurencya Ciputra" className="w-full h-full object-cover" />
           </div>
         </motion.div>
       </section>
 
-      {/* Marquee-like education strip */}
-      <div className="border-y border-border bg-card">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex flex-wrap items-center gap-x-8 gap-y-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-          <span className="text-foreground font-semibold">Yale University</span>
-          <span>B.S. Computer Science</span>
-          <span>Class of 2023</span>
-          <span>Distributed Systems</span>
-          <span>Algorithms</span>
-          <span>Robotics</span>
+      {/* Education strip */}
+      <div className="bg-secondary/50 border-y border-border/50">
+        <div className="max-w-4xl mx-auto px-6 py-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted-foreground">
+          <span className="bg-card px-3 py-1 rounded-lg font-medium text-foreground shadow-sm">Yale University</span>
+          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">B.S. Computer Science</span>
+          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Class of 2023</span>
+          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Distributed Systems</span>
+          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Algorithms</span>
+          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Robotics</span>
         </div>
       </div>
 
       {/* Experience */}
-      <section id="work" className="max-w-5xl mx-auto px-6 py-20">
+      <section id="work" className="max-w-4xl mx-auto px-6 py-20">
         <motion.div
           custom={0}
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-10"
         >
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground tracking-tight">
-            Where I've
-            <br />
-            <span className="text-primary">worked</span>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+            Where I've worked
           </h2>
+          <p className="text-muted-foreground mt-2">A few places I've called home.</p>
         </motion.div>
 
-        <div className="space-y-16">
+        <div className="space-y-12">
           {experiences.map((exp, ei) => (
             <motion.div
               key={exp.company}
@@ -204,30 +196,29 @@ const Index = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <h3 className="font-display text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
+              <h3 className="text-lg font-semibold text-foreground mb-5 flex items-center gap-3">
                 {exp.company}
                 <div className="h-px flex-1 bg-border" />
               </h3>
 
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {exp.roles.map((role, ri) => (
-                  <div key={ri} className="grid md:grid-cols-[200px_1fr] gap-4">
-                    <div className="font-mono text-xs text-muted-foreground pt-1">
-                      <p>{role.period}</p>
-                      <p className="flex items-center gap-1 mt-1">
-                        <MapPin className="w-3 h-3" /> {role.location}
-                      </p>
+                  <div key={ri} className="bg-card rounded-2xl p-5 border border-border/60 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                      <h4 className="font-medium text-foreground">{role.title}</h4>
+                      <span className="text-xs text-muted-foreground mt-1 sm:mt-0">{role.period}</span>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">{role.title}</h4>
-                      <ul className="space-y-1.5">
-                        {role.bullets.map((b, bi) => (
-                          <li key={bi} className="text-sm text-muted-foreground leading-relaxed pl-4 border-l-2 border-primary/30">
-                            {b}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <p className="text-xs text-muted-foreground flex items-center gap-1 mb-3">
+                      <MapPin className="w-3 h-3" /> {role.location}
+                    </p>
+                    <ul className="space-y-1.5">
+                      {role.bullets.map((b, bi) => (
+                        <li key={bi} className="text-sm text-muted-foreground leading-relaxed flex gap-2">
+                          <span className="text-primary mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-primary/40" />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 ))}
               </div>
@@ -237,23 +228,23 @@ const Index = () => {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="border-y border-border bg-card">
-        <div className="max-w-5xl mx-auto px-6 py-20">
+      <section id="skills" className="bg-secondary/30 border-y border-border/50">
+        <div className="max-w-4xl mx-auto px-6 py-20">
           <motion.div
             custom={0}
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="mb-10"
+            className="mb-8"
           >
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground tracking-tight">
-              Tools &<br />
-              <span className="text-primary">languages</span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+              Tools & languages
             </h2>
+            <p className="text-muted-foreground mt-2">Technologies I work with daily.</p>
           </motion.div>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2.5">
             {skills.map((skill, i) => (
               <motion.span
                 key={skill}
@@ -262,48 +253,49 @@ const Index = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                whileHover={{ y: -4 }}
-                className="px-4 py-2 border border-border bg-background text-foreground font-mono text-sm rounded-sm cursor-default hover:border-primary hover:text-primary transition-colors"
+                whileHover={{ y: -3 }}
+                className="px-4 py-2 bg-card border border-border/60 text-foreground text-sm font-medium rounded-xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all cursor-default"
               >
                 {skill}
               </motion.span>
             ))}
           </div>
 
-          <div className="mt-10 font-mono text-xs text-muted-foreground uppercase tracking-wider">
-            <p>Domains: ML Systems · Infra & Backend · Full-stack · iOS · Android · Web</p>
-          </div>
+          <p className="mt-8 text-sm text-muted-foreground">
+            Domains: ML Systems · Infra & Backend · Full-stack · iOS · Android · Web
+          </p>
         </div>
       </section>
 
       {/* Contact */}
-      <section id="contact" className="max-w-5xl mx-auto px-6 py-24">
+      <section id="contact" className="max-w-4xl mx-auto px-6 py-24">
         <motion.div
           custom={0}
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-12 items-center"
+          className="grid md:grid-cols-2 gap-10 items-center"
         >
           <div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-4">
-              Let's<br />
-              <span className="text-primary">talk</span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-3">
+              Let's connect
             </h2>
-            <p className="text-muted-foreground max-w-sm">
+            <p className="text-muted-foreground">
               Whether it's distributed systems, LLM infrastructure, or something 
-              completely unexpected — I'm always down for a good conversation.
+              completely different — I'd love to hear from you.
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             <a
               href="mailto:flaurencya.ciputra@gmail.com"
-              className="group flex items-center justify-between p-5 border border-border rounded-sm hover:border-primary transition-colors"
+              className="group flex items-center justify-between p-4 bg-card border border-border/60 rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
             >
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary" />
+                <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Mail className="w-4 h-4 text-primary" />
+                </div>
                 <span className="text-sm text-foreground">flaurencya.ciputra@gmail.com</span>
               </div>
               <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
@@ -312,10 +304,12 @@ const Index = () => {
               href="https://www.linkedin.com/in/flaurencya-ciputra"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between p-5 border border-border rounded-sm hover:border-primary transition-colors"
+              className="group flex items-center justify-between p-4 bg-card border border-border/60 rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
             >
               <div className="flex items-center gap-3">
-                <Linkedin className="w-5 h-5 text-primary" />
+                <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Linkedin className="w-4 h-4 text-primary" />
+                </div>
                 <span className="text-sm text-foreground">linkedin.com/in/flaurencya-ciputra</span>
               </div>
               <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
@@ -325,10 +319,10 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border">
-        <div className="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
-          <span className="font-mono text-xs text-muted-foreground">© 2026 Flaurencya Ciputra</span>
-          <span className="font-mono text-xs text-muted-foreground">Built with care ◆</span>
+      <footer className="border-t border-border/50">
+        <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between text-sm text-muted-foreground">
+          <span>© 2026 Flaurencya Ciputra</span>
+          <span>Built with care ♡</span>
         </div>
       </footer>
     </div>
