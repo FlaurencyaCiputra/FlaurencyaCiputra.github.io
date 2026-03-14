@@ -178,51 +178,69 @@ const Index = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
             Where I've worked
           </h2>
-          <p className="text-muted-foreground mt-2">A few places I've called home.</p>
+
         </motion.div>
+        <div className="space-y-12">
+          {experiences.map((exp, ei) =>
+            <motion.div
+              key={exp.company}
+              custom={ei + 1}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}>
+              <h3 className="text-lg font-semibold text-foreground mb-5 flex items-center gap-3">
+                {exp.company}
+                <div className="h-px flex-1 bg-border/50" />
+              </h3>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+              <div className="space-y-4">
+                {exp.roles.map((role, ri) =>
+                  <div key={ri} className="glass rounded-2xl p-5 shadow-sm hover:shadow-lg transition-shadow">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                      <h4 className="font-medium text-foreground">{role.title}</h4>
+                      <span className="text-xs text-muted-foreground mt-1 sm:mt-0">{role.period}</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground flex items-center gap-1 mb-3">
+                      <MapPin className="w-3 h-3" /> {role.location}
+                    </p>
+                    <ul className="space-y-1.5">
+                      {role.bullets.map((b, bi) =>
+                        <li key={bi} className="text-sm text-muted-foreground leading-relaxed flex gap-2">
+                          <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full gradient-bg" />
+                          {b}
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          )}
+        </div>
       </section>
 
-      {/* Skills */}
+      {/* Projects */}
+      <section id="projects" className="relative">
+        <div className="glass border-y border-border/40">
+          <div className="max-w-4xl mx-auto px-6 py-20">
+            <motion.div
+              custom={0}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="mb-10">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+                Projects
+              </h2>
+              <p className="text-muted-foreground mt-2">Notable things I've built coming soon...</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tools & Languages */}
       <section id="skills" className="bg-secondary/30 border-y border-border/50">
         <div className="max-w-4xl mx-auto px-6 py-20">
           <motion.div
