@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,41 +6,41 @@
 
 @layer base {
   :root {
-    --background: 45 33% 97%;
-    --foreground: 240 20% 20%;
+    --background: 50 20% 96%;
+    --foreground: 30 10% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 20% 20%;
+    --card: 45 25% 93%;
+    --card-foreground: 30 10% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 20% 20%;
+    --popover: 50 20% 96%;
+    --popover-foreground: 30 10% 12%;
 
-    --primary: 340 65% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 18 80% 55%;
+    --primary-foreground: 50 20% 96%;
 
-    --secondary: 200 60% 88%;
-    --secondary-foreground: 240 20% 20%;
+    --secondary: 45 30% 88%;
+    --secondary-foreground: 30 10% 12%;
 
-    --muted: 45 20% 92%;
-    --muted-foreground: 240 10% 46%;
+    --muted: 40 15% 90%;
+    --muted-foreground: 30 8% 45%;
 
-    --accent: 160 45% 80%;
-    --accent-foreground: 240 20% 20%;
+    --accent: 210 35% 40%;
+    --accent-foreground: 50 20% 96%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 45 20% 88%;
-    --input: 45 20% 88%;
-    --ring: 340 65% 65%;
+    --border: 35 15% 82%;
+    --input: 35 15% 82%;
+    --ring: 18 80% 55%;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
-    --peach: 20 80% 88%;
-    --lavender: 270 50% 90%;
-    --mint: 160 45% 88%;
-    --sky: 200 60% 88%;
-    --lemon: 50 80% 90%;
+    --ochre: 35 60% 55%;
+    --ink: 220 25% 18%;
+    --clay: 15 30% 75%;
+    --stone: 40 10% 60%;
+    --cream: 45 30% 94%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -53,25 +53,25 @@
   }
 
   .dark {
-    --background: 240 20% 10%;
-    --foreground: 45 33% 97%;
-    --card: 240 20% 13%;
-    --card-foreground: 45 33% 97%;
-    --popover: 240 20% 13%;
-    --popover-foreground: 45 33% 97%;
-    --primary: 340 65% 65%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 200 30% 25%;
-    --secondary-foreground: 45 33% 97%;
-    --muted: 240 15% 20%;
-    --muted-foreground: 45 15% 65%;
-    --accent: 160 30% 25%;
-    --accent-foreground: 45 33% 97%;
+    --background: 220 25% 8%;
+    --foreground: 45 20% 90%;
+    --card: 220 20% 12%;
+    --card-foreground: 45 20% 90%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 45 20% 90%;
+    --primary: 18 80% 55%;
+    --primary-foreground: 50 20% 96%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 45 20% 90%;
+    --muted: 220 15% 16%;
+    --muted-foreground: 40 10% 55%;
+    --accent: 210 35% 50%;
+    --accent-foreground: 50 20% 96%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 240 15% 20%;
-    --input: 240 15% 20%;
-    --ring: 340 65% 65%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 18 80% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -89,11 +89,15 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
     font-family: 'Space Grotesk', sans-serif;
   }
 }
 
-.font-handwriting {
-  font-family: 'Caveat', cursive;
+.font-display {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
 }
