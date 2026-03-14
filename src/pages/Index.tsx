@@ -20,22 +20,19 @@ const experiences = [
     location: "Menlo Park, CA",
     period: "May 2025 – Present",
     bullets: [
-    "Designed and built MSL's premier internal OSS model deployment service from scratch — distributed inference, spec decode, multi-modality.",
-    "Developed distributed, disaggregated inference features with spec decoding across Meta's inference platform.",
+    "Designed and built MSL's premier internal OSS model production deployment service supporting distributed inference, spec decode, multi-modality.",
+    "Became org-wide point person for OSS model deployments, supporting customers and onboarding model configs and customizations for high-priority LLM deployments, latency/throughput sensitive workloads, and Reinforcement Learning",
     "Org-wide point person for OSS model deployments; supported high-priority LLM workloads and RL.",
-    "Led backend development of TPGS dashboard for MSL researchers and leadership.",
-    "Created agent skills automating service management, improving deployment success rate by 29%."]
-
+    "Led backend development of Tokens Per GPU Second (TPGS) dashboard for MSL researchers and leadership."]
   },
   {
     title: "Software Engineer, Creator Insights",
     location: "Menlo Park, CA",
     period: "Mar 2024 – Apr 2025",
     bullets: [
-    "Led content-level follows/unfollows metric — unlocking insights for ~200M creators, reaching parity with Instagram & YouTube.",
-    "Designed ratio metrics (likes, comments, shares per view) for ~200M creators.",
-    "Led Advanced Protection (2FA) enrollment, reaching 21% of all large creators."]
-
+    "Led the design, implementation, rollout, and QA of a new metric to track follows/unfollows at the content level, unlocking insights for approximately 200 creators and reaching parity with Instagram and YouTube. Managed cross platform and media technical challenges and client/server logging and storage costs.",
+    "Designed and implemented new ratio metrics (e.g., likes, comments, shares per view) helping approximately 200 million creators gauge content effectiveness and reaching parity with Instagram and YouTube Studio.",
+    "Led Advanced Protection (2FA) enrollment amongst creators via experimental design, technical implementation of onboardingflows, and collaboration with cross functional teams, data science, and user researchers. Enrolled 21% of all large creators."]
   },
   {
     title: "SWE Intern, Network Infra",
