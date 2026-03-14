@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import pfp from "@/assets/pfp.png";
-import { Mail, Linkedin, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, Linkedin, MapPin, ArrowUpRight, ExternalLink } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -69,6 +69,38 @@ const experiences = [
 
 }];
 
+const projects = [
+  {
+    title: "<TBD>",
+    tags: ["Python", "Rust"],
+    period: "Spring 2026",
+    description: "Cooking up an LLM inference project"
+  },
+  {
+    title: "Machine Learning powered Breast Cancer Cell Segmentation",
+    tags: ["Python", "R", "ArcGIS"],
+    period: "Spring 2023",
+    description: "Improved the accuracy of digitally segmented cancer cells by fine-tuning deep learning algorithms: ISO Cluster Classification, K-nearest Neighbors, Random Forest, and Maximum Likelihood"
+  },
+  {
+    title: "Recreation of Raft Consensus Algorithm and Distributed Key-Value Service",
+    tags: ["Go", "Rust", "Kubernetes"],
+    period: "Spring 2022",
+    description: "Developed a Key/Value service from scratch using the Raft consensus algorithm, parallelization, and sharding fault tolerance. https://github.com/flaurencyac/cs426-spring2022-labs"
+  },
+  {
+    title: "Emotional Twitter Bot",
+    tags: ["Python"],
+    period: "Spring 2022",
+    description: "Trained a Twitter bot using GPT2-AI and NLP  to evaluate tweet sentiment and auto generate positive or negative responses."
+  },
+  {
+    title: "Yale Space Station",
+    tags: ["Python"],
+    period: "Fall 2020",
+    description: "Received the $3,000 NASA Space Grant for building a ham radio station that can contact the astronauts aboard the ISS."
+  },];
+
 
 const skills = [
 "Python", "Rust", "C++", "Go", "Java", "Kotlin", "TypeScript", "React",
@@ -77,153 +109,202 @@ const skills = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background selection:bg-primary/15">
-      {/* Nav */}
-      <motion.nav
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="sticky top-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/50">
+    <>
+      <div className="min-h-screen bg-background selection:bg-primary/15">
+        {/* Nav */}
+        <motion.nav
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="sticky top-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/50">
 
-        <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="font-display text-lg font-semibold text-foreground tracking-tight">
-            flaurencya<span className="text-primary">.</span>
-          </span>
-          <div className="flex gap-6 text-sm text-muted-foreground font-medium">
-            <a href="#work" className="hover:text-foreground transition-colors">Work</a>
-            <a href="#projects" className="hover:text-foreground transition-colors">Projects</a>
-            <a href="#skills" className="hover:text-foreground transition-colors">Skills</a>
-            <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
-          </div>
-        </div>
-      </motion.nav>
-
-      {/* Hero */}
-      <section className="max-w-4xl mx-auto px-6 pt-20 pb-16">
-        <div className="grid md:grid-cols-[1fr_auto] gap-12 items-center">
-          <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible">
-            <p className="text-sm text-primary font-medium mb-3 tracking-wide">
-              Systems Engineer at Meta
-            </p>
-            <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground leading-tight tracking-tight mb-5">
-              Hi, I'm Flaurencya Ciputra
-            </h1>
-            <p className="text-base text-muted-foreground max-w-lg leading-relaxed">
-              I build systems that scale to millions — from LLM inference infrastructure
-              to creator analytics tools. Yale CS '23. Currently making AI inference
-              faster at Meta.
-            </p>
-            <div className="flex gap-3 mt-7">
-              <a
-                href="mailto:flaurencya.ciputra@gmail.com"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-xl hover:opacity-90 transition-opacity shadow-sm shadow-primary/20">
-
-                <Mail className="w-4 h-4" /> Get in touch
-              </a>
-              <a
-                href="https://www.linkedin.com/in/flaurencya-ciputra"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border border-border bg-card text-foreground text-sm font-medium rounded-xl hover:bg-secondary transition-colors">
-
-                <Linkedin className="w-4 h-4" /> LinkedIn
-              </a>
+          <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+            <span className="font-display text-lg font-semibold text-foreground tracking-tight">
+              flaurencya<span className="text-primary">.</span>
+            </span>
+            <div className="flex gap-6 text-sm text-muted-foreground font-medium">
+              <a href="#work" className="hover:text-foreground transition-colors">Work</a>
+              <a href="#projects" className="hover:text-foreground transition-colors">Projects</a>
+              <a href="#skills" className="hover:text-foreground transition-colors">Skills</a>
+              <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
             </div>
-          </motion.div>
+          </div>
+        </motion.nav>
 
+        {/* Hero */}
+        <section className="max-w-4xl mx-auto px-6 pt-20 pb-16">
+          <div className="grid md:grid-cols-[1fr_auto] gap-12 items-center">
+            <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible">
+              <p className="text-sm text-primary font-medium mb-3 tracking-wide">
+                Systems Engineer at Meta
+              </p>
+              <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground leading-tight tracking-tight mb-5">
+                Hi, I'm Flaurencya Ciputra
+              </h1>
+              <p className="text-base text-muted-foreground max-w-lg leading-relaxed">
+                I build systems that scale to millions — from LLM inference infrastructure
+                to creator analytics tools. Yale CS '23. Currently making AI inference
+                faster at Meta. I like to learn, create, and organize events.
+              </p>
+              <div className="flex gap-3 mt-7">
+                <a
+                  href="mailto:flaurencya.ciputra@gmail.com"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-xl hover:opacity-90 transition-opacity shadow-sm shadow-primary/20">
+
+                  <Mail className="w-4 h-4" /> Get in touch
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/flaurencya-ciputra"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 border border-border bg-card text-foreground text-sm font-medium rounded-xl hover:bg-secondary transition-colors">
+
+                  <Linkedin className="w-4 h-4" /> LinkedIn
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="hidden md:block">
+
+              <div className="w-56 h-68 overflow-hidden rounded-3xl shadow-lg shadow-primary/10 ring-1 ring-border">
+                <img src={pfp} alt="Flaurencya Ciputra" className="w-full h-full object-cover" />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Mobile photo */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="hidden md:block">
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="md:hidden mt-8 flex justify-center">
 
-            <div className="w-56 h-68 overflow-hidden rounded-3xl shadow-lg shadow-primary/10 ring-1 ring-border">
+            <div className="w-44 h-56 overflow-hidden rounded-3xl shadow-lg shadow-primary/10 ring-1 ring-border">
               <img src={pfp} alt="Flaurencya Ciputra" className="w-full h-full object-cover" />
             </div>
           </motion.div>
-        </div>
+        </section>
 
-        {/* Mobile photo */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="md:hidden mt-8 flex justify-center">
-
-          <div className="w-44 h-56 overflow-hidden rounded-3xl shadow-lg shadow-primary/10 ring-1 ring-border">
-            <img src={pfp} alt="Flaurencya Ciputra" className="w-full h-full object-cover" />
+        {/* Education strip */}
+        <div className="bg-secondary/50 border-y border-border/50">
+          <div className="max-w-4xl mx-auto px-6 py-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted-foreground">
+            <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Distributed Systems</span>
+            <span className="bg-card px-3 py-1 rounded-lg shadow-sm">LLM Inference Infra</span>
+            <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Backend and Fullstack</span>
+            <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Constant Learning</span>
           </div>
-        </motion.div>
-      </section>
-
-      {/* Education strip */}
-      <div className="bg-secondary/50 border-y border-border/50">
-        <div className="max-w-4xl mx-auto px-6 py-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted-foreground">
-          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Distributed Systems</span>
-          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">LLM Inference Infra</span>
-          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Backend and Fullstack</span>
-          <span className="bg-card px-3 py-1 rounded-lg shadow-sm">Constant Learning</span>
         </div>
-      </div>
 
-      {/* Experience */}
-      <section id="work" className="max-w-4xl mx-auto px-6 py-20">
-        <motion.div
-          custom={0}
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mb-10">
+        {/* Experience */}
+        <section id="work" className="max-w-4xl mx-auto px-6 py-20">
+          <motion.div
+            custom={0}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mb-10">
 
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-            Where I've worked
-          </h2>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+              Where I've worked
+            </h2>
 
-        </motion.div>
-        <div className="space-y-12">
-          {experiences.map((exp, ei) =>
-            <motion.div
-              key={exp.company}
-              custom={ei + 1}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}>
-              <h3 className="text-lg font-semibold text-foreground mb-5 flex items-center gap-3">
-                {exp.company}
-                <div className="h-px flex-1 bg-border/50" />
-              </h3>
+          </motion.div>
+          <div className="space-y-12">
+            {experiences.map((exp, ei) =>
+              <motion.div
+                key={exp.company}
+                custom={ei + 1}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}>
+                <h3 className="text-lg font-semibold text-foreground mb-5 flex items-center gap-3">
+                  {exp.company}
+                  <div className="h-px flex-1 bg-border/50" />
+                </h3>
 
-              <div className="space-y-4">
-                {exp.roles.map((role, ri) =>
-                  <div key={ri} className="glass rounded-2xl p-5 shadow-sm hover:shadow-lg transition-shadow">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                      <h4 className="font-medium text-foreground">{role.title}</h4>
-                      <span className="text-xs text-muted-foreground mt-1 sm:mt-0">{role.period}</span>
+                <div className="space-y-4">
+                  {exp.roles.map((role, ri) =>
+                    <div key={ri} className="glass rounded-2xl p-5 shadow-sm hover:shadow-lg transition-shadow">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h4 className="font-medium text-foreground">{role.title}</h4>
+                        <span className="text-xs text-muted-foreground mt-1 sm:mt-0">{role.period}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground flex items-center gap-1 mb-3">
+                        <MapPin className="w-3 h-3" /> {role.location}
+                      </p>
+                      <ul className="space-y-1.5">
+                        {role.bullets.map((b, bi) =>
+                          <li key={bi} className="text-sm text-muted-foreground leading-relaxed flex gap-2">
+                            <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full gradient-bg" />
+                            {b}
+                          </li>
+                        )}
+                      </ul>
                     </div>
-                    <p className="text-xs text-muted-foreground flex items-center gap-1 mb-3">
-                      <MapPin className="w-3 h-3" /> {role.location}
+                  )}
+                </div>
+              </motion.div>
+            )}
+          </div>
+        </section>
+
+        {/* Projects */}
+        <section id="projects" className="relative">
+          <div className="glass border-y border-border/40">
+            <div className="max-w-4xl mx-auto px-6 py-20">
+              <motion.div
+                custom={0}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="mb-10">
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+                  Projects
+                </h2>
+                <p className="text-muted-foreground mt-2">Notable things I've built.</p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                {projects.map((project, i) =>
+                  <motion.div
+                    key={project.title}
+                    custom={i + 1}
+                    variants={fadeUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    whileHover={{ y: -4 }}
+                    className="glass rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all group cursor-default">
+                    <h3 className="font-semibold text-foreground mb-2 flex items-center justify-between">
+                      {project.title}
+                      <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      {project.description}
                     </p>
-                    <ul className="space-y-1.5">
-                      {role.bullets.map((b, bi) =>
-                        <li key={bi} className="text-sm text-muted-foreground leading-relaxed flex gap-2">
-                          <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full gradient-bg" />
-                          {b}
-                        </li>
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.tags.map((tag) =>
+                        <span key={tag} className="px-2.5 py-1 text-xs font-medium rounded-lg bg-primary/10 text-primary">
+                          {tag}
+                        </span>
                       )}
-                    </ul>
-                  </div>
+                    </div>
+                  </motion.div>
                 )}
               </div>
-            </motion.div>
-          )}
-        </div>
-      </section>
+            </div>
+          </div>
+        </section>
 
-      {/* Projects */}
-      <section id="projects" className="relative">
-        <div className="glass border-y border-border/40">
+        {/* Tools & Languages */}
+        <section id="skills" className="bg-secondary/30 border-y border-border/50">
           <div className="max-w-4xl mx-auto px-6 py-20">
             <motion.div
               custom={0}
@@ -231,115 +312,97 @@ const Index = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="mb-10">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-                Projects
-              </h2>
-              <p className="text-muted-foreground mt-2">Notable things I've built coming soon...</p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+              className="mb-8">
 
-      {/* Tools & Languages */}
-      <section id="skills" className="bg-secondary/30 border-y border-border/50">
-        <div className="max-w-4xl mx-auto px-6 py-20">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+                Tools & languages
+              </h2>
+              <p className="text-muted-foreground mt-2">Technologies I work with daily.</p>
+            </motion.div>
+
+            <div className="flex flex-wrap gap-2.5">
+              {skills.map((skill, i) =>
+                <motion.span
+                  key={skill}
+                  custom={i}
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  whileHover={{ y: -3 }}
+                  className="px-4 py-2 bg-card border border-border/60 text-foreground text-sm font-medium rounded-xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all cursor-default">
+
+                  {skill}
+                </motion.span>
+              )}
+            </div>
+
+            <p className="mt-8 text-sm text-muted-foreground">
+              Domains: ML Systems · Infra & Backend · Full-stack · iOS · Android · Web
+            </p>
+          </div>
+        </section>
+
+        {/* Contact */}
+        <section id="contact" className="max-w-4xl mx-auto px-6 py-24">
           <motion.div
             custom={0}
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="mb-8">
+            className="grid md:grid-cols-2 gap-10 items-center">
 
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-              Tools & languages
-            </h2>
-            <p className="text-muted-foreground mt-2">Technologies I work with daily.</p>
+            <div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-3">
+                Let's connect
+              </h2>
+              <p className="text-muted-foreground">
+                Whether it's distributed systems, LLM infrastructure, or something
+                completely different — I'd love to hear from you.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <a
+                href="mailto:flaurencya.ciputra@gmail.com"
+                className="group flex items-center justify-between p-4 bg-card border border-border/60 rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
+
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Mail className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-sm text-foreground">flaurencya.ciputra@gmail.com</span>
+                </div>
+                <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/flaurencya-ciputra"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between p-4 bg-card border border-border/60 rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
+
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Linkedin className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-sm text-foreground">linkedin.com/in/flaurencya-ciputra</span>
+                </div>
+                <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+              </a>
+            </div>
           </motion.div>
+        </section>
 
-          <div className="flex flex-wrap gap-2.5">
-            {skills.map((skill, i) =>
-            <motion.span
-              key={skill}
-              custom={i}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              whileHover={{ y: -3 }}
-              className="px-4 py-2 bg-card border border-border/60 text-foreground text-sm font-medium rounded-xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all cursor-default">
-
-                {skill}
-              </motion.span>
-            )}
+        {/* Footer */}
+        <footer className="border-t border-border/50">
+          <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between text-sm text-muted-foreground">
+            <span>© 2026 Flaurencya Ciputra</span>
           </div>
-
-          <p className="mt-8 text-sm text-muted-foreground">
-            Domains: ML Systems · Infra & Backend · Full-stack · iOS · Android · Web
-          </p>
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section id="contact" className="max-w-4xl mx-auto px-6 py-24">
-        <motion.div
-          custom={0}
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-10 items-center">
-
-          <div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-3">
-              Let's connect
-            </h2>
-            <p className="text-muted-foreground">
-              Whether it's distributed systems, LLM infrastructure, or something
-              completely different — I'd love to hear from you.
-            </p>
-          </div>
-
-          <div className="space-y-3">
-            <a
-              href="mailto:flaurencya.ciputra@gmail.com"
-              className="group flex items-center justify-between p-4 bg-card border border-border/60 rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
-
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Mail className="w-4 h-4 text-primary" />
-                </div>
-                <span className="text-sm text-foreground">flaurencya.ciputra@gmail.com</span>
-              </div>
-              <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/flaurencya-ciputra"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between p-4 bg-card border border-border/60 rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
-
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Linkedin className="w-4 h-4 text-primary" />
-                </div>
-                <span className="text-sm text-foreground">linkedin.com/in/flaurencya-ciputra</span>
-              </div>
-              <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-            </a>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Footer */}
-      <footer className="border-t border-border/50">
-        <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between text-sm text-muted-foreground">
-          <span>© 2026 Flaurencya Ciputra</span>
-        </div>
-      </footer>
-    </div>);
-
+        </footer>
+      </div>
+    </>
+  );
 };
 
 export default Index;
