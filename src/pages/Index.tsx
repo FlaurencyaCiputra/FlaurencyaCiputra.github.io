@@ -92,7 +92,7 @@ const Index = () => {
           <div className="flex gap-6 text-sm text-muted-foreground font-medium">
             <a href="#work" className="hover:text-foreground transition-colors">Work</a>
             <a href="#skills" className="hover:text-foreground transition-colors">Skills</a>
-            <a href="#contact" className="hover:text-foreground transition-colors bg-primary">Contact</a>
+            <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
           </div>
         </div>
       </motion.nav>
