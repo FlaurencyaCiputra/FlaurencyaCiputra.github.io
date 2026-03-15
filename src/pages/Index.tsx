@@ -161,6 +161,14 @@ const Index = () => {
 
                   <Linkedin className="w-4 h-4" /> LinkedIn
                 </a>
+                <a
+                  href="https://github.com/FlaurencyaCiputra"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 border border-border bg-card text-foreground text-sm font-medium rounded-xl hover:bg-secondary transition-colors">
+
+                  <Linkedin className="w-4 h-4" /> GitHub
+                </a>
               </div>
             </motion.div>
 
